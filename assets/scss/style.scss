@@ -1,0 +1,290 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.fill-orange {
+  fill: #fd7e14 !important;
+}
+
+.fill-warning {
+  fill: #f7c32e !important;
+}
+.fill-primary {
+  fill: #066ac9 !important;
+}
+.fill-info {
+  fill: #17a2b8 !important;
+}
+
+// Khai báo kích thước tương ứng với màn hình thiết bị
+
+$SM: 576px;
+$MD: 768px;
+$LG: 992px;
+$XL: 1200px;
+$XXL: 1400px;
+
+// media queries
+
+@mixin Responsive($canvas) {
+  @if $canvas == SM {
+    @media only screen and (max-width: $SM) {
+      @content;
+    }
+  } @else if $canvas == MD {
+    @media only screen and (max-width: $MD) {
+      @content;
+    }
+  } @else if $canvas == LG {
+    @media only screen and (max-width: $LG) {
+      @content;
+    }
+  } @else if $canvas == XL {
+    @media only screen and (max-width: $XL) {
+      @content;
+    }
+  } @else if $canvas == XXL {
+    @media only screen and (max-width: $XXL) {
+      @content;
+    }
+  }
+}
+
+header {
+  position: relative;
+  z-index: 2;
+  .navbar {
+    .navbar-brand {
+      img {
+        height: 36px;
+      }
+    }
+    .nav-link {
+      color: #747579;
+      font-weight: 600;
+      margin: 4px 16px;
+    }
+    button {
+      margin: 4px 16px;
+      font-weight: 600;
+    }
+  }
+}
+
+main {
+  .header {
+    figure {
+      margin-top: -10rem;
+      @include Responsive(XXL) {
+        margin-top: -15rem;
+      }
+      @include Responsive(XL) {
+        margin-top: -16rem;
+      }
+      @include Responsive(MD) {
+        margin-top: -5rem;
+      }
+      @include Responsive(SM) {
+        margin-top: -3rem;
+      }
+      svg {
+        path {
+          opacity: 0.1;
+          fill: #066ac9;
+        }
+      }
+    }
+    .container {
+      max-width: 94% !important;
+      width: 94% !important;
+      z-index: 2;
+      .row {
+        align-items: center;
+        .col-md-5 {
+          @include Responsive(SM) {
+            margin-top: 4rem;
+          }
+        }
+        .col-md-7 {
+          @include Responsive(SM) {
+            margin-top: 4rem;
+          }
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .introdution {
+    margin-top: 50px;
+    @include Responsive(MD) {
+      margin-top: -5rem;
+    }
+    @include Responsive(LG) {
+      margin-top: 0;
+    }
+    .container {
+      .row {
+        .img-intro {
+          position: relative;
+          figure {
+            position: absolute;
+            top: 50%;
+            left: 40%;
+            transform: translate(-50%, -50%);
+            path {
+              opacity: 0.1;
+              fill: #066ac9;
+            }
+            z-index: 1;
+          }
+          img {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+          }
+        }
+        .des {
+          margin: auto;
+        }
+        h2 {
+          font-weight: 700;
+        }
+        p {
+          color: #747579;
+        }
+        .btn {
+          font-weight: 600;
+          font-size: 16px;
+          color: #066ac9;
+          background-color: rgba(6, 106, 201, 0.1);
+          border: none;
+          &:hover {
+            color: #fff;
+            background-color: #066ac9;
+            border-color: #066ac9;
+          }
+        }
+      }
+    }
+  }
+
+  .course {
+    .row > div {
+      transition: 0.1s ease-in-out;
+      cursor: pointer;
+      &:hover {
+        transform: translateY(-0.25rem);
+        h5 {
+          color: #066ac9;
+        }
+      }
+    }
+    .icon-xl {
+      width: 5rem;
+      height: 5rem;
+      line-height: 5rem;
+      text-align: center;
+      font-size: 1.9rem;
+    }
+    h5 {
+      font-weight: 700;
+    }
+    span {
+      color: #747579;
+      font-weight: 600;
+    }
+  }
+
+  .download {
+    padding: 3.5rem 0;
+    .container {
+      max-width: 94% !important;
+      h2 {
+        font-weight: 700;
+      }
+      p {
+        color: #747579;
+      }
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .get {
+    .container {
+      max-width: 94% !important;
+      .row {
+        .col-12 {
+          overflow: hidden;
+          padding: 48px;
+          span {
+            font-weight: 600;
+          }
+          h2 {
+            font-weight: 700;
+          }
+          a {
+            font-weight: 600;
+          }
+          img {
+            @include Responsive(SM) {
+              width: 100%;
+            }
+          }
+          .col-lg-3 {
+            z-index: 1;
+            figure {
+              z-index: -1;
+              opacity: 0.3;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+footer {
+  .container {
+    @include Responsive(XL) {
+      max-width: 94%;
+    }
+    @include Responsive(MD) {
+      max-width: 96%;
+    }
+    hr {
+      margin: 2rem 0;
+      color: #9a9ea4;
+      border-top: 1px solid;
+      opacity: 0.5;
+    }
+    .row {
+      p {
+        color: #747579;
+      }
+      input {
+        padding: 0.4rem 1rem;
+        outline: none;
+      }
+      .btn {
+        font-weight: 600;
+        font-size: 16px;
+      }
+      .nav {
+        .nav-item {
+          a {
+            color: #747579;
+            ion-icon {
+              color: #5d82d1;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,243 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.fill-orange {
+  fill: #fd7e14 !important;
+}
+
+.fill-warning {
+  fill: #f7c32e !important;
+}
+
+.fill-primary {
+  fill: #066ac9 !important;
+}
+
+.fill-info {
+  fill: #17a2b8 !important;
+}
+
+header {
+  position: relative;
+  z-index: 2;
+}
+header .navbar .navbar-brand img {
+  height: 36px;
+}
+header .navbar .nav-link {
+  color: #747579;
+  font-weight: 600;
+  margin: 4px 16px;
+}
+header .navbar button {
+  margin: 4px 16px;
+  font-weight: 600;
+}
+
+main .header figure {
+  margin-top: -10rem;
+}
+@media only screen and (max-width: 1400px) {
+  main .header figure {
+    margin-top: -15rem;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  main .header figure {
+    margin-top: -16rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  main .header figure {
+    margin-top: -5rem;
+  }
+}
+@media only screen and (max-width: 576px) {
+  main .header figure {
+    margin-top: -3rem;
+  }
+}
+main .header figure svg path {
+  opacity: 0.1;
+  fill: #066ac9;
+}
+main .header .container {
+  max-width: 94% !important;
+  width: 94% !important;
+  z-index: 2;
+}
+main .header .container .row {
+  align-items: center;
+}
+@media only screen and (max-width: 576px) {
+  main .header .container .row .col-md-5 {
+    margin-top: 4rem;
+  }
+}
+@media only screen and (max-width: 576px) {
+  main .header .container .row .col-md-7 {
+    margin-top: 4rem;
+  }
+}
+main .header .container .row .col-md-7 img {
+  width: 100%;
+}
+main .introdution {
+  margin-top: 50px;
+}
+@media only screen and (max-width: 768px) {
+  main .introdution {
+    margin-top: -5rem;
+  }
+}
+@media only screen and (max-width: 992px) {
+  main .introdution {
+    margin-top: 0;
+  }
+}
+main .introdution .container .row .img-intro {
+  position: relative;
+}
+main .introdution .container .row .img-intro figure {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+main .introdution .container .row .img-intro figure path {
+  opacity: 0.1;
+  fill: #066ac9;
+}
+main .introdution .container .row .img-intro img {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+main .introdution .container .row .des {
+  margin: auto;
+}
+main .introdution .container .row h2 {
+  font-weight: 700;
+}
+main .introdution .container .row p {
+  color: #747579;
+}
+main .introdution .container .row .btn {
+  font-weight: 600;
+  font-size: 16px;
+  color: #066ac9;
+  background-color: rgba(6, 106, 201, 0.1);
+  border: none;
+}
+main .introdution .container .row .btn:hover {
+  color: #fff;
+  background-color: #066ac9;
+  border-color: #066ac9;
+}
+main .course .row > div {
+  transition: 0.1s ease-in-out;
+  cursor: pointer;
+}
+main .course .row > div:hover {
+  transform: translateY(-0.25rem);
+}
+main .course .row > div:hover h5 {
+  color: #066ac9;
+}
+main .course .icon-xl {
+  width: 5rem;
+  height: 5rem;
+  line-height: 5rem;
+  text-align: center;
+  font-size: 1.9rem;
+}
+main .course h5 {
+  font-weight: 700;
+}
+main .course span {
+  color: #747579;
+  font-weight: 600;
+}
+main .download {
+  padding: 3.5rem 0;
+}
+main .download .container {
+  max-width: 94% !important;
+}
+main .download .container h2 {
+  font-weight: 700;
+}
+main .download .container p {
+  color: #747579;
+}
+main .download .container img {
+  width: 100%;
+}
+main .get .container {
+  max-width: 94% !important;
+}
+main .get .container .row .col-12 {
+  overflow: hidden;
+  padding: 48px;
+}
+main .get .container .row .col-12 span {
+  font-weight: 600;
+}
+main .get .container .row .col-12 h2 {
+  font-weight: 700;
+}
+main .get .container .row .col-12 a {
+  font-weight: 600;
+}
+@media only screen and (max-width: 576px) {
+  main .get .container .row .col-12 img {
+    width: 100%;
+  }
+}
+main .get .container .row .col-12 .col-lg-3 {
+  z-index: 1;
+}
+main .get .container .row .col-12 .col-lg-3 figure {
+  z-index: -1;
+  opacity: 0.3;
+}
+
+@media only screen and (max-width: 1200px) {
+  footer .container {
+    max-width: 94%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  footer .container {
+    max-width: 96%;
+  }
+}
+footer .container hr {
+  margin: 2rem 0;
+  color: #9a9ea4;
+  border-top: 1px solid;
+  opacity: 0.5;
+}
+footer .container .row p {
+  color: #747579;
+}
+footer .container .row input {
+  padding: 0.4rem 1rem;
+  outline: none;
+}
+footer .container .row .btn {
+  font-weight: 600;
+  font-size: 16px;
+}
+footer .container .row .nav .nav-item a {
+  color: #747579;
+}
+footer .container .row .nav .nav-item a ion-icon {
+  color: #5d82d1;
+}
+
+/*# sourceMappingURL=style.css.map */
